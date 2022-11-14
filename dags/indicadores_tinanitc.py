@@ -14,7 +14,7 @@ client = boto3.client(
 )
 
 default_args = {
-    'owner': 'Ney',
+    'owner': 'Richard de Andrade',
     'start_date': datetime(2022, 4, 2)
 }
 
