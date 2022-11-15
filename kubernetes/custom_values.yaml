@@ -5,7 +5,7 @@ env:
   - name: AIRFLOW__LOGGING__REMOTE_LOGGING
     value: 'True'
   - name: AIRFLOW__LOGGING__REMOTE_BASE_LOG_FOLDER
-    value: 's3://airflow-logs-452490318365/logs/' ## Endereço uri do da sua pasta onde vão ficar os logs do Airflow
+    value: 's3://airflow-logs-452490318365/logs/'
   - name: AIRFLOW__LOGGING__REMOTE_LOG_CONN_ID
     value: 'my_aws'
 webserver:
@@ -26,12 +26,12 @@ redis:
 dags:
   gitSync:
     enabled: true
-    repo: https://github.com/rcdandrade/airflow-data-pipelines.git # no seu repositório faz copie o link
+    repo: https://github.com/rcdandrade/airflow-data-pipelines.git 
     branch: main
     rev: HEAD
     depth: 1
     maxFailures: 0
-    subPath: "dags" ## COLOQUE O NOME DA PASTA ONDE ESTÃO AS DAGS
+    subPath: "dags"
     wait: 60
     containerName: git-sync
     uid: 65533
