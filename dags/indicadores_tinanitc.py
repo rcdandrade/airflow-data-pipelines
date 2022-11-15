@@ -56,7 +56,7 @@ def indicadores_titanic():
                 'Ec2KeyName': 'rcd-pucminas-testes',
                 'KeepJobFlowAliveWhenNoSteps': True,
                 'TerminationProtected': False,
-                'Ec2SubnetId': 'subnet-07f7fb1c119256ce9'
+                'Ec2SubnetId': 'subnet-0d990422e4cbea820'
             },
 
             Applications=[{'Name': 'Spark'}, {'Name': 'Hive'}],
