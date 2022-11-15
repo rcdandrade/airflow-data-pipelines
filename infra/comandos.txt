@@ -1,0 +1,50 @@
+-- Todos os comandos utilizados no exercício -- 
+
+eksctl create cluster --version=1.21 --name=trabfinal --timeout=60m0s --managed --instance-types=m5.xlarge --alb-ingress-access --node-private-networking --region=us-east-1 --nodes-min=2 --nodes-max=3 --full-ecr-access --asg-access --nodegroup-name=ng-trabfinal
+   
+kubectl config get-contexts
+
+kubectl get nodes
+
+kubectl get namespaces
+
+kubectl get pods
+
+kubectl get pods -n kube-system
+
+kubectl create namespace airflow
+
+kubectl get namespaces
+
+helm repo add apache-airflow https://airflow.apache.org
+
+helm repo update
+
+helm upgrade --install airflow apache-airflow/airflow --namespace airflow --create-namespace
+
+helm show values apache-airflow/airflow >> airflow/custom_values.yaml
+
+helm install airflow apache-airflow/airflow -f airflow/custom_values.yaml -n airflow --wait=false --debug
+
+helm install airflow apache-airflow/airflow -f airflow/custom_values.yaml -n airflow --debug --timeout 10m0s
+
+kubectl get pods -n airflow
+
+kubectl get svc -n airflow
+
+kubectl delete namespace airflow
+
+helm delete airflow -n airflow
+
+kubectl delete pvc --all -n airflow
+
+kubectl delete svc --all -n airflow
+
+eksctl delete cluster --name=trabfinal
+
+eksctl delete cluster --region=us-east-1 --name=trabfinal
+
+aws configure
+
+
+
