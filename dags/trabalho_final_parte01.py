@@ -56,7 +56,7 @@ def trabalho_final():
                 'Ec2KeyName': 'rcd-pucminas-testes',
                 'KeepJobFlowAliveWhenNoSteps': True,
                 'TerminationProtected': False,
-                'Ec2SubnetId': 'subnet-0d990422e4cbea820'
+                'Ec2SubnetId': 'subnet-05587d75e963eada9'
             },
 
             Applications=[{'Name': 'Spark'}, {'Name': 'Hive'}],
